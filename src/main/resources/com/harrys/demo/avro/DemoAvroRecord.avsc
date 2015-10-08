@@ -1,0 +1,14 @@
+{
+    "namespace":    "com.harrys.demo.avro",
+    "type":         "record",
+    "name":         "DemoAvroRecord",
+    "fields": [
+        {"name": "jobUUID",     "type": "string" },
+        {"name": "taskNumber",  "type": "int"    },
+        {"name": "firstValue",  "type": "int"    },
+        {"name": "lastValue",   "type": "int"    },
+        {"name": "chunkSize",   "type": "int"    },
+        {"name": "jobValue",    "type": "int"    },
+        {"name": "value",       "type": "int"    }
+    ]
+}
