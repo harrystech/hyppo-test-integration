@@ -12,7 +12,7 @@ Here are the classes involved in retrieving, processing, persisting data.  This 
 
 Also needed:
 
-* JSON schema 
+* JSON schema
 * Avro schema
 
 
