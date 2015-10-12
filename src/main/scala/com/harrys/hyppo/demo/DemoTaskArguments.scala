@@ -1,4 +1,4 @@
-package com.harrys.demo
+package com.harrys.hyppo.demo
 
 import com.typesafe.config.Config
 
