@@ -3,7 +3,7 @@ package com.harrys.hyppo.demo
 import java.util.{Date, UUID}
 
 import com.harrys.hyppo.source.api.model.{DataIngestionJob, DataIngestionTask, IngestionSource}
-import com.harrys.hyppo.source.api.task.CreateTasksForJob
+import com.harrys.hyppo.source.api.task.CreateIngestionTasks
 import com.typesafe.config.ConfigFactory
 import org.scalatest.concurrent.TimeLimitedTests
 import org.scalatest.time.{Seconds, Span}
@@ -36,10 +36,10 @@ class DemoTaskCreatorTest extends WordSpecLike with Matchers with TimeLimitedTes
   "The task creator" must {
 
     "map value range to list of tasks" in {
-      val createTasks = new CreateTasksForJob(ingestionJob)
+      val createTasks = new CreateIngestionTasks(ingestionJob)
       val taskCreator = new DemoTaskCreator()
 
-      taskCreator.createTasks(createTasks)
+      taskCreator.createIngestionTasks(createTasks)
 
       val builder = createTasks.getTaskBuilder
       val tasks = builder.build()
@@ -57,10 +57,10 @@ class DemoTaskCreatorTest extends WordSpecLike with Matchers with TimeLimitedTes
       val jobParameters = ConfigFactory.parseString("value: 99")
       val ingestionJob = new DataIngestionJob(ingestionSource, id, jobParameters, startedAt)
 
-      val createTasks = new CreateTasksForJob(ingestionJob)
+      val createTasks = new CreateIngestionTasks(ingestionJob)
       val taskCreator = new DemoTaskCreator()
 
-      taskCreator.createTasks(createTasks)
+      taskCreator.createIngestionTasks(createTasks)
 
       val builder = createTasks.getTaskBuilder
       val tasks = builder.build()
@@ -87,10 +87,10 @@ class DemoTaskCreatorTest extends WordSpecLike with Matchers with TimeLimitedTes
       val ingestionSource = new IngestionSource(name, sourceConfig)
 
       val ingestionJob = new DataIngestionJob(ingestionSource, id, defaultJobParameters, startedAt)
-      val createTasks = new CreateTasksForJob(ingestionJob)
+      val createTasks = new CreateIngestionTasks(ingestionJob)
       val taskCreator = new DemoTaskCreator()
 
-      taskCreator.createTasks(createTasks)
+      taskCreator.createIngestionTasks(createTasks)
 
       val builder = createTasks.getTaskBuilder
       builder.build()

@@ -2,8 +2,8 @@ package com.harrys.hyppo.demo
 
 import com.harrys.hyppo.demo.avro.DemoAvroRecord
 import com.harrys.hyppo.demo.json.DemoJson
-import com.typesafe.scalalogging.Logger
 import com.harrys.hyppo.source.api.task.{ProcessRawData, RawDataProcessor}
+import com.typesafe.scalalogging.Logger
 import org.apache.commons.io.IOUtils
 import org.json4s.DefaultFormats
 import org.json4s.jackson.JsonMethods._

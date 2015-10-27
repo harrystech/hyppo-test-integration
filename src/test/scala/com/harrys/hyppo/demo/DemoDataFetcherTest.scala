@@ -5,7 +5,7 @@ import java.util.{Date, UUID}
 
 import com.harrys.hyppo.source.api.data.RawDataCollector
 import com.harrys.hyppo.source.api.model.{DataIngestionJob, DataIngestionTask, IngestionSource}
-import com.harrys.hyppo.source.api.task.{CreateTasksForJob, FetchRawData}
+import com.harrys.hyppo.source.api.task.{CreateIngestionTasks, FetchRawData}
 import com.typesafe.config.ConfigFactory
 import org.scalatest.concurrent.TimeLimitedTests
 import org.scalatest.time.{Seconds, Span}
@@ -35,9 +35,9 @@ class DemoDataFetcherTest extends WordSpecLike with Matchers with TimeLimitedTes
       val startedAt = new Date()
       val ingestionJob = new DataIngestionJob(ingestionSource, id, defaultJobParameters, startedAt)
 
-      val createTasks = new CreateTasksForJob(ingestionJob)
+      val createTasks = new CreateIngestionTasks(ingestionJob)
       val taskCreator = new DemoTaskCreator()
-      taskCreator.createTasks(createTasks)
+      taskCreator.createIngestionTasks(createTasks)
       val builder = createTasks.getTaskBuilder
       val tasks = builder.build()
 

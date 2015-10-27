@@ -1,8 +1,8 @@
 package com.harrys.hyppo.demo
 
 import com.harrys.hyppo.demo.avro.DemoAvroRecord
-import com.typesafe.scalalogging.Logger
 import com.harrys.hyppo.source.api.task.{PersistProcessedData, ProcessedDataPersister}
+import com.typesafe.scalalogging.Logger
 import org.slf4j.LoggerFactory
 
 import scala.collection.JavaConversions

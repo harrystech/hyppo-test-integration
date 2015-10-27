@@ -18,9 +18,9 @@ class DemoIntegration extends RawDataIntegration[DemoAvroRecord] {
 
   override def validateTaskArguments(task: DataIngestionTask): ValidationResult = DemoValidations.validateTaskArguments(task)
 
-  override def newIngestionTaskCreator(): TaskCreator = new DemoTaskCreator()
+  override def newIngestionTaskCreator(): IngestionTaskCreator = new DemoTaskCreator()
 
-  override def newDataPersister(): ProcessedDataPersister[DemoAvroRecord] = new DemoPersister()
+  override def newProcessedDataPersister(): ProcessedDataPersister[DemoAvroRecord] = new DemoPersister()
 
   // RawDataIntegration interface
 
