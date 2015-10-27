@@ -1,9 +1,9 @@
-package com.harrys.demo
+package com.harrys.hyppo.demo
 
 import java.io.ByteArrayInputStream
 
-import com.typesafe.scalalogging.Logger
 import com.harrys.hyppo.source.api.task.{FetchRawData, RawDataFetcher}
+import com.typesafe.scalalogging.Logger
 import org.apache.commons.io.Charsets
 import org.json4s.JsonDSL._
 import org.json4s.jackson.JsonMethods._

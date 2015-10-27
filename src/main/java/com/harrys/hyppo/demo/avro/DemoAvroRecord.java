@@ -3,11 +3,11 @@
  * 
  * DO NOT EDIT DIRECTLY
  */
-package com.harrys.demo.avro;  
+package com.harrys.hyppo.demo.avro;  
 @SuppressWarnings("all")
 @org.apache.avro.specific.AvroGenerated
 public class DemoAvroRecord extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"DemoAvroRecord\",\"namespace\":\"com.harrys.demo.avro\",\"fields\":[{\"name\":\"jobUUID\",\"type\":\"string\"},{\"name\":\"taskNumber\",\"type\":\"int\"},{\"name\":\"firstValue\",\"type\":\"int\"},{\"name\":\"lastValue\",\"type\":\"int\"},{\"name\":\"chunkSize\",\"type\":\"int\"},{\"name\":\"jobValue\",\"type\":\"int\"},{\"name\":\"value\",\"type\":\"int\"}]}");
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"DemoAvroRecord\",\"namespace\":\"com.harrys.hyppo.demo.avro\",\"fields\":[{\"name\":\"jobUUID\",\"type\":\"string\"},{\"name\":\"taskNumber\",\"type\":\"int\"},{\"name\":\"firstValue\",\"type\":\"int\"},{\"name\":\"lastValue\",\"type\":\"int\"},{\"name\":\"chunkSize\",\"type\":\"int\"},{\"name\":\"jobValue\",\"type\":\"int\"},{\"name\":\"value\",\"type\":\"int\"}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
   @Deprecated public java.lang.CharSequence jobUUID;
   @Deprecated public int taskNumber;
@@ -172,18 +172,18 @@ public class DemoAvroRecord extends org.apache.avro.specific.SpecificRecordBase 
   }
 
   /** Creates a new DemoAvroRecord RecordBuilder */
-  public static com.harrys.demo.avro.DemoAvroRecord.Builder newBuilder() {
-    return new com.harrys.demo.avro.DemoAvroRecord.Builder();
+  public static com.harrys.hyppo.demo.avro.DemoAvroRecord.Builder newBuilder() {
+    return new com.harrys.hyppo.demo.avro.DemoAvroRecord.Builder();
   }
   
   /** Creates a new DemoAvroRecord RecordBuilder by copying an existing Builder */
-  public static com.harrys.demo.avro.DemoAvroRecord.Builder newBuilder(com.harrys.demo.avro.DemoAvroRecord.Builder other) {
-    return new com.harrys.demo.avro.DemoAvroRecord.Builder(other);
+  public static com.harrys.hyppo.demo.avro.DemoAvroRecord.Builder newBuilder(com.harrys.hyppo.demo.avro.DemoAvroRecord.Builder other) {
+    return new com.harrys.hyppo.demo.avro.DemoAvroRecord.Builder(other);
   }
   
   /** Creates a new DemoAvroRecord RecordBuilder by copying an existing DemoAvroRecord instance */
-  public static com.harrys.demo.avro.DemoAvroRecord.Builder newBuilder(com.harrys.demo.avro.DemoAvroRecord other) {
-    return new com.harrys.demo.avro.DemoAvroRecord.Builder(other);
+  public static com.harrys.hyppo.demo.avro.DemoAvroRecord.Builder newBuilder(com.harrys.hyppo.demo.avro.DemoAvroRecord other) {
+    return new com.harrys.hyppo.demo.avro.DemoAvroRecord.Builder(other);
   }
   
   /**
@@ -202,11 +202,11 @@ public class DemoAvroRecord extends org.apache.avro.specific.SpecificRecordBase 
 
     /** Creates a new Builder */
     private Builder() {
-      super(com.harrys.demo.avro.DemoAvroRecord.SCHEMA$);
+      super(com.harrys.hyppo.demo.avro.DemoAvroRecord.SCHEMA$);
     }
     
     /** Creates a Builder by copying an existing Builder */
-    private Builder(com.harrys.demo.avro.DemoAvroRecord.Builder other) {
+    private Builder(com.harrys.hyppo.demo.avro.DemoAvroRecord.Builder other) {
       super(other);
       if (isValidValue(fields()[0], other.jobUUID)) {
         this.jobUUID = data().deepCopy(fields()[0].schema(), other.jobUUID);
@@ -239,8 +239,8 @@ public class DemoAvroRecord extends org.apache.avro.specific.SpecificRecordBase 
     }
     
     /** Creates a Builder by copying an existing DemoAvroRecord instance */
-    private Builder(com.harrys.demo.avro.DemoAvroRecord other) {
-            super(com.harrys.demo.avro.DemoAvroRecord.SCHEMA$);
+    private Builder(com.harrys.hyppo.demo.avro.DemoAvroRecord other) {
+            super(com.harrys.hyppo.demo.avro.DemoAvroRecord.SCHEMA$);
       if (isValidValue(fields()[0], other.jobUUID)) {
         this.jobUUID = data().deepCopy(fields()[0].schema(), other.jobUUID);
         fieldSetFlags()[0] = true;
@@ -277,7 +277,7 @@ public class DemoAvroRecord extends org.apache.avro.specific.SpecificRecordBase 
     }
     
     /** Sets the value of the 'jobUUID' field */
-    public com.harrys.demo.avro.DemoAvroRecord.Builder setJobUUID(java.lang.CharSequence value) {
+    public com.harrys.hyppo.demo.avro.DemoAvroRecord.Builder setJobUUID(java.lang.CharSequence value) {
       validate(fields()[0], value);
       this.jobUUID = value;
       fieldSetFlags()[0] = true;
@@ -290,7 +290,7 @@ public class DemoAvroRecord extends org.apache.avro.specific.SpecificRecordBase 
     }
     
     /** Clears the value of the 'jobUUID' field */
-    public com.harrys.demo.avro.DemoAvroRecord.Builder clearJobUUID() {
+    public com.harrys.hyppo.demo.avro.DemoAvroRecord.Builder clearJobUUID() {
       jobUUID = null;
       fieldSetFlags()[0] = false;
       return this;
@@ -302,7 +302,7 @@ public class DemoAvroRecord extends org.apache.avro.specific.SpecificRecordBase 
     }
     
     /** Sets the value of the 'taskNumber' field */
-    public com.harrys.demo.avro.DemoAvroRecord.Builder setTaskNumber(int value) {
+    public com.harrys.hyppo.demo.avro.DemoAvroRecord.Builder setTaskNumber(int value) {
       validate(fields()[1], value);
       this.taskNumber = value;
       fieldSetFlags()[1] = true;
@@ -315,7 +315,7 @@ public class DemoAvroRecord extends org.apache.avro.specific.SpecificRecordBase 
     }
     
     /** Clears the value of the 'taskNumber' field */
-    public com.harrys.demo.avro.DemoAvroRecord.Builder clearTaskNumber() {
+    public com.harrys.hyppo.demo.avro.DemoAvroRecord.Builder clearTaskNumber() {
       fieldSetFlags()[1] = false;
       return this;
     }
@@ -326,7 +326,7 @@ public class DemoAvroRecord extends org.apache.avro.specific.SpecificRecordBase 
     }
     
     /** Sets the value of the 'firstValue' field */
-    public com.harrys.demo.avro.DemoAvroRecord.Builder setFirstValue(int value) {
+    public com.harrys.hyppo.demo.avro.DemoAvroRecord.Builder setFirstValue(int value) {
       validate(fields()[2], value);
       this.firstValue = value;
       fieldSetFlags()[2] = true;
@@ -339,7 +339,7 @@ public class DemoAvroRecord extends org.apache.avro.specific.SpecificRecordBase 
     }
     
     /** Clears the value of the 'firstValue' field */
-    public com.harrys.demo.avro.DemoAvroRecord.Builder clearFirstValue() {
+    public com.harrys.hyppo.demo.avro.DemoAvroRecord.Builder clearFirstValue() {
       fieldSetFlags()[2] = false;
       return this;
     }
@@ -350,7 +350,7 @@ public class DemoAvroRecord extends org.apache.avro.specific.SpecificRecordBase 
     }
     
     /** Sets the value of the 'lastValue' field */
-    public com.harrys.demo.avro.DemoAvroRecord.Builder setLastValue(int value) {
+    public com.harrys.hyppo.demo.avro.DemoAvroRecord.Builder setLastValue(int value) {
       validate(fields()[3], value);
       this.lastValue = value;
       fieldSetFlags()[3] = true;
@@ -363,7 +363,7 @@ public class DemoAvroRecord extends org.apache.avro.specific.SpecificRecordBase 
     }
     
     /** Clears the value of the 'lastValue' field */
-    public com.harrys.demo.avro.DemoAvroRecord.Builder clearLastValue() {
+    public com.harrys.hyppo.demo.avro.DemoAvroRecord.Builder clearLastValue() {
       fieldSetFlags()[3] = false;
       return this;
     }
@@ -374,7 +374,7 @@ public class DemoAvroRecord extends org.apache.avro.specific.SpecificRecordBase 
     }
     
     /** Sets the value of the 'chunkSize' field */
-    public com.harrys.demo.avro.DemoAvroRecord.Builder setChunkSize(int value) {
+    public com.harrys.hyppo.demo.avro.DemoAvroRecord.Builder setChunkSize(int value) {
       validate(fields()[4], value);
       this.chunkSize = value;
       fieldSetFlags()[4] = true;
@@ -387,7 +387,7 @@ public class DemoAvroRecord extends org.apache.avro.specific.SpecificRecordBase 
     }
     
     /** Clears the value of the 'chunkSize' field */
-    public com.harrys.demo.avro.DemoAvroRecord.Builder clearChunkSize() {
+    public com.harrys.hyppo.demo.avro.DemoAvroRecord.Builder clearChunkSize() {
       fieldSetFlags()[4] = false;
       return this;
     }
@@ -398,7 +398,7 @@ public class DemoAvroRecord extends org.apache.avro.specific.SpecificRecordBase 
     }
     
     /** Sets the value of the 'jobValue' field */
-    public com.harrys.demo.avro.DemoAvroRecord.Builder setJobValue(int value) {
+    public com.harrys.hyppo.demo.avro.DemoAvroRecord.Builder setJobValue(int value) {
       validate(fields()[5], value);
       this.jobValue = value;
       fieldSetFlags()[5] = true;
@@ -411,7 +411,7 @@ public class DemoAvroRecord extends org.apache.avro.specific.SpecificRecordBase 
     }
     
     /** Clears the value of the 'jobValue' field */
-    public com.harrys.demo.avro.DemoAvroRecord.Builder clearJobValue() {
+    public com.harrys.hyppo.demo.avro.DemoAvroRecord.Builder clearJobValue() {
       fieldSetFlags()[5] = false;
       return this;
     }
@@ -422,7 +422,7 @@ public class DemoAvroRecord extends org.apache.avro.specific.SpecificRecordBase 
     }
     
     /** Sets the value of the 'value' field */
-    public com.harrys.demo.avro.DemoAvroRecord.Builder setValue(int value) {
+    public com.harrys.hyppo.demo.avro.DemoAvroRecord.Builder setValue(int value) {
       validate(fields()[6], value);
       this.value = value;
       fieldSetFlags()[6] = true;
@@ -435,7 +435,7 @@ public class DemoAvroRecord extends org.apache.avro.specific.SpecificRecordBase 
     }
     
     /** Clears the value of the 'value' field */
-    public com.harrys.demo.avro.DemoAvroRecord.Builder clearValue() {
+    public com.harrys.hyppo.demo.avro.DemoAvroRecord.Builder clearValue() {
       fieldSetFlags()[6] = false;
       return this;
     }

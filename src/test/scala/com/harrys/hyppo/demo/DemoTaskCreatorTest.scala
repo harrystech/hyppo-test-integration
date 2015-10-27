@@ -1,13 +1,14 @@
-package com.harrys.demo
+package com.harrys.hyppo.demo
 
 import java.util.{Date, UUID}
 
-import com.typesafe.config.ConfigFactory
-import com.harrys.hyppo.source.api.model.{DataIngestionTask, DataIngestionJob, IngestionSource}
+import com.harrys.hyppo.source.api.model.{DataIngestionJob, DataIngestionTask, IngestionSource}
 import com.harrys.hyppo.source.api.task.CreateIngestionTasks
+import com.typesafe.config.ConfigFactory
 import org.scalatest.concurrent.TimeLimitedTests
 import org.scalatest.time.{Seconds, Span}
 import org.scalatest.{Matchers, WordSpecLike}
+
 import scala.collection.JavaConversions._
 import scala.collection.mutable.ListBuffer
 
@@ -15,7 +16,7 @@ class DemoTaskCreatorTest extends WordSpecLike with Matchers with TimeLimitedTes
 
   override val timeLimit = Span(20, Seconds)
 
-  val name = "com.harrys.demo.DemoIntegration"
+  val name = "com.harrys.hyppo.demo.DemoIntegration"
   val firstValue = 1
   val lastValue = 3
   val defaultSourceConfig = ConfigFactory.parseString(

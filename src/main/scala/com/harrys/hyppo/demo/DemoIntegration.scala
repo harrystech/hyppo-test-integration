@@ -1,6 +1,6 @@
-package com.harrys.demo
+package com.harrys.hyppo.demo
 
-import com.harrys.demo.avro.DemoAvroRecord
+import com.harrys.hyppo.demo.avro.DemoAvroRecord
 import com.harrys.hyppo.source.api.data.AvroRecordType
 import com.harrys.hyppo.source.api.model.{DataIngestionJob, DataIngestionTask, IngestionSource}
 import com.harrys.hyppo.source.api.task._
