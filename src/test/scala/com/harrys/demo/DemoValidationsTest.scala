@@ -3,7 +3,7 @@ package com.harrys.demo
 import java.util.{Date, UUID}
 
 import com.typesafe.config.ConfigFactory
-import io.ingestion.source.api.model.{DataIngestionJob, DataIngestionTask, IngestionSource}
+import com.harrys.hyppo.source.api.model.{DataIngestionJob, DataIngestionTask, IngestionSource}
 import org.scalatest.concurrent.TimeLimitedTests
 import org.scalatest.time.{Seconds, Span}
 import org.scalatest.{Matchers, WordSpecLike}

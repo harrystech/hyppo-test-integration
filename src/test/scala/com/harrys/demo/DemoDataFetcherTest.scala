@@ -7,9 +7,9 @@ import java.util.{Date, UUID}
 
 import com.harrys.demo.avro.DemoAvroRecord
 import com.typesafe.config.ConfigFactory
-import io.ingestion.source.api.data.{AvroRecordAppender, RawDataCollector}
-import io.ingestion.source.api.model.{DataIngestionTask, DataIngestionJob, IngestionSource}
-import io.ingestion.source.api.task.{ProcessRawData, FetchRawData, CreateTasksForJob}
+import com.harrys.hyppo.source.api.data.{AvroRecordAppender, RawDataCollector}
+import com.harrys.hyppo.source.api.model.{DataIngestionTask, DataIngestionJob, IngestionSource}
+import com.harrys.hyppo.source.api.task.{CreateIngestionTasks, ProcessRawData, FetchRawData}
 import org.scalatest.concurrent.TimeLimitedTests
 import org.scalatest.time.{Seconds, Span}
 import org.scalatest.{Matchers, WordSpecLike}
@@ -37,9 +37,9 @@ class DemoDataFetcherTest extends WordSpecLike with Matchers with TimeLimitedTes
       val startedAt = new Date()
       val ingestionJob = new DataIngestionJob(ingestionSource, id, defaultJobParameters, startedAt)
 
-      val createTasks = new CreateTasksForJob(ingestionJob)
+      val createTasks = new CreateIngestionTasks(ingestionJob)
       val taskCreator = new DemoTaskCreator()
-      taskCreator.createTasks(createTasks)
+      taskCreator.createIngestionTasks(createTasks)
       val builder = createTasks.getTaskBuilder
       val tasks = builder.build()
 

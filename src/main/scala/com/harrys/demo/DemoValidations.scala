@@ -1,8 +1,8 @@
 package com.harrys.demo
 
 import com.typesafe.config.ConfigException
-import io.ingestion.source.api.ValidationResult
-import io.ingestion.source.api.model.{DataIngestionJob, DataIngestionTask, IngestionSource}
+import com.harrys.hyppo.source.api.ValidationResult
+import com.harrys.hyppo.source.api.model.{DataIngestionJob, DataIngestionTask, IngestionSource}
 
 object DemoValidations {
 

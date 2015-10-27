@@ -4,9 +4,11 @@ organization := "com.harrys"
 
 name := "hyppo-test-integration"
 
-version := "0.0.1-SNAPSHOT"
+version := "0.4.0-SNAPSHOT"
 
 scalaVersion := "2.11.7"
+
+resolvers ++= Seq(Resolver.sonatypeRepo("public"), Resolver.sonatypeRepo("snapshots"))
 
 libraryDependencies ++= Seq(
   "com.typesafe.scala-logging" %% "scala-logging" % "3.1.0",
@@ -16,7 +18,7 @@ libraryDependencies ++= Seq(
   "org.json4s" %% "json4s-core" % "3.2.11",
   "org.json4s" %% "json4s-jackson" % "3.2.11",
   "org.json4s" %% "json4s-ext" % "3.2.11",
-  "com.harrys" % "source-api" % "0.1.8"
+  "com.harrys.hyppo" % "source-api" % "0.4.0-SNAPSHOT"
 )
 
 //  Export jars instead of exporting the classpath location

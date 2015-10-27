@@ -2,7 +2,7 @@ package com.harrys.demo
 
 import com.harrys.demo.avro.DemoAvroRecord
 import com.typesafe.scalalogging.Logger
-import io.ingestion.source.api.task.{PersistProcessedData, ProcessedDataPersister}
+import com.harrys.hyppo.source.api.task.{PersistProcessedData, ProcessedDataPersister}
 import org.slf4j.LoggerFactory
 
 import scala.collection.JavaConversions

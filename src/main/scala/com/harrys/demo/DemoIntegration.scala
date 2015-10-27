@@ -1,10 +1,10 @@
 package com.harrys.demo
 
 import com.harrys.demo.avro.DemoAvroRecord
-import io.ingestion.source.api.data.AvroRecordType
-import io.ingestion.source.api.model.{DataIngestionJob, DataIngestionTask, IngestionSource}
-import io.ingestion.source.api.task._
-import io.ingestion.source.api.{RawDataIntegration, ValidationResult}
+import com.harrys.hyppo.source.api.data.AvroRecordType
+import com.harrys.hyppo.source.api.model.{DataIngestionJob, DataIngestionTask, IngestionSource}
+import com.harrys.hyppo.source.api.task._
+import com.harrys.hyppo.source.api.{RawDataIntegration, ValidationResult}
 
 class DemoIntegration extends RawDataIntegration[DemoAvroRecord] {
 
@@ -18,9 +18,9 @@ class DemoIntegration extends RawDataIntegration[DemoAvroRecord] {
 
   override def validateTaskArguments(task: DataIngestionTask): ValidationResult = DemoValidations.validateTaskArguments(task)
 
-  override def newIngestionTaskCreator(): TaskCreator = new DemoTaskCreator()
+  override def newIngestionTaskCreator(): IngestionTaskCreator = new DemoTaskCreator()
 
-  override def newDataPersister(): ProcessedDataPersister[DemoAvroRecord] = new DemoPersister()
+  override def newProcessedDataPersister(): ProcessedDataPersister[DemoAvroRecord] = new DemoPersister()
 
   // RawDataIntegration interface
 
