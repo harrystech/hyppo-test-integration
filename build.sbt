@@ -4,7 +4,7 @@ organization := "com.harrys"
 
 name := "hyppo-test-integration"
 
-version := "0.4.0-"
+version := "0.4.0"
 
 
 scalaVersion := "2.11.7"
