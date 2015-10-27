@@ -1,8 +1,8 @@
-package com.harrys.demo
+package com.harrys.hyppo.demo
 
 import java.util
 
-import io.ingestion.source.api.task.{CreateTasksForJob, TaskCreator}
+import com.harrys.hyppo.source.api.task.{CreateTasksForJob, TaskCreator}
 
 import scala.collection.JavaConversions._
 import scala.math.min

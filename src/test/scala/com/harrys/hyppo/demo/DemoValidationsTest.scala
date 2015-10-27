@@ -1,9 +1,9 @@
-package com.harrys.demo
+package com.harrys.hyppo.demo
 
 import java.util.{Date, UUID}
 
+import com.harrys.hyppo.source.api.model.{DataIngestionJob, DataIngestionTask, IngestionSource}
 import com.typesafe.config.ConfigFactory
-import io.ingestion.source.api.model.{DataIngestionJob, DataIngestionTask, IngestionSource}
 import org.scalatest.concurrent.TimeLimitedTests
 import org.scalatest.time.{Seconds, Span}
 import org.scalatest.{Matchers, WordSpecLike}
@@ -12,7 +12,7 @@ class DemoValidationsTest extends WordSpecLike with Matchers with TimeLimitedTes
 
   override val timeLimit = Span(20, Seconds)
 
-  val name = "com.harrys.demo.DemoIntegration"
+  val name = "com.harrys.hyppo.demo.DemoIntegration"
   val defaultSourceConfig = ConfigFactory.parseString(
     """{
       "firstValue": 1,

@@ -4,7 +4,7 @@ organization := "com.harrys"
 
 name := "hyppo-test-integration"
 
-version := "0.0.1-SNAPSHOT"
+version := "0.2.0"
 
 scalaVersion := "2.11.7"
 
@@ -16,15 +16,16 @@ libraryDependencies ++= Seq(
   "org.json4s" %% "json4s-core" % "3.2.11",
   "org.json4s" %% "json4s-jackson" % "3.2.11",
   "org.json4s" %% "json4s-ext" % "3.2.11",
-  "com.harrys" % "source-api" % "0.1.8"
+  "com.harrys.hyppo" % "source-api" % "0.2.0"
 )
+
+lazy val integrationUtils  = RootProject(uri("https://github.com/harrystech/ingestion-utils.git#v0.0.2"))
 
 //  Export jars instead of exporting the classpath location
 //exportJars := true
 
 //  Override default assembly name
 assemblyJarName := { name.value + "-assembly-" + version.value + ".jar" }
-
 
 // --
 //  Testing Setup

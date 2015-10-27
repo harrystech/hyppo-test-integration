@@ -1,4 +1,4 @@
-package com.harrys.demo.json
+package com.harrys.hyppo.demo.json
 
 import scala.beans.BeanProperty
 

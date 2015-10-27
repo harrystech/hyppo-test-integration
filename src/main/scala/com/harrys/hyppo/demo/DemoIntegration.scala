@@ -1,10 +1,10 @@
-package com.harrys.demo
+package com.harrys.hyppo.demo
 
-import com.harrys.demo.avro.DemoAvroRecord
-import io.ingestion.source.api.data.AvroRecordType
-import io.ingestion.source.api.model.{DataIngestionJob, DataIngestionTask, IngestionSource}
-import io.ingestion.source.api.task._
-import io.ingestion.source.api.{RawDataIntegration, ValidationResult}
+import com.harrys.hyppo.demo.avro.DemoAvroRecord
+import com.harrys.hyppo.source.api.data.AvroRecordType
+import com.harrys.hyppo.source.api.model.{DataIngestionJob, DataIngestionTask, IngestionSource}
+import com.harrys.hyppo.source.api.task._
+import com.harrys.hyppo.source.api.{RawDataIntegration, ValidationResult}
 
 class DemoIntegration extends RawDataIntegration[DemoAvroRecord] {
 

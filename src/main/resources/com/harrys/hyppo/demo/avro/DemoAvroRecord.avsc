@@ -1,5 +1,5 @@
 {
-    "namespace":    "com.harrys.demo.avro",
+    "namespace":    "com.harrys.hyppo.demo.avro",
     "type":         "record",
     "name":         "DemoAvroRecord",
     "fields": [

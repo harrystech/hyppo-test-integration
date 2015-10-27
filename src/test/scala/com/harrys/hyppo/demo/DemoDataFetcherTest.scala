@@ -1,18 +1,16 @@
-package com.harrys.demo
+package com.harrys.hyppo.demo
 
-import java.io.File
 import java.nio.file.Files
-import java.util
 import java.util.{Date, UUID}
 
-import com.harrys.demo.avro.DemoAvroRecord
+import com.harrys.hyppo.source.api.data.RawDataCollector
+import com.harrys.hyppo.source.api.model.{DataIngestionJob, DataIngestionTask, IngestionSource}
+import com.harrys.hyppo.source.api.task.{CreateTasksForJob, FetchRawData}
 import com.typesafe.config.ConfigFactory
-import io.ingestion.source.api.data.{AvroRecordAppender, RawDataCollector}
-import io.ingestion.source.api.model.{DataIngestionTask, DataIngestionJob, IngestionSource}
-import io.ingestion.source.api.task.{ProcessRawData, FetchRawData, CreateTasksForJob}
 import org.scalatest.concurrent.TimeLimitedTests
 import org.scalatest.time.{Seconds, Span}
 import org.scalatest.{Matchers, WordSpecLike}
+
 import scala.collection.JavaConversions._
 
 class DemoDataFetcherTest extends WordSpecLike with Matchers with TimeLimitedTests {
@@ -22,7 +20,7 @@ class DemoDataFetcherTest extends WordSpecLike with Matchers with TimeLimitedTes
   "The data fetcher" must {
 
     "lead to temp files being created" in {
-      val name = "com.harrys.demo.DemoIntegration"
+      val name = "com.harrys.hyppo.demo.DemoIntegration"
       val defaultSourceConfig = ConfigFactory.parseString(
         s"""{
             "firstValue": 1,

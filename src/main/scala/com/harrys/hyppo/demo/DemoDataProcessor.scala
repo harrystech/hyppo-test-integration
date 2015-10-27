@@ -1,9 +1,9 @@
-package com.harrys.demo
+package com.harrys.hyppo.demo
 
-import com.harrys.demo.avro.DemoAvroRecord
-import com.harrys.demo.json.DemoJson
+import com.harrys.hyppo.demo.avro.DemoAvroRecord
+import com.harrys.hyppo.demo.json.DemoJson
 import com.typesafe.scalalogging.Logger
-import io.ingestion.source.api.task.{ProcessRawData, RawDataProcessor}
+import com.harrys.hyppo.source.api.task.{ProcessRawData, RawDataProcessor}
 import org.apache.commons.io.IOUtils
 import org.json4s.DefaultFormats
 import org.json4s.jackson.JsonMethods._
