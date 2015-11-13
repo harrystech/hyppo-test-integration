@@ -15,7 +15,6 @@ libraryDependencies ++= Seq(
   "com.typesafe.scala-logging" %% "scala-logging" % "3.1.0",
   "ch.qos.logback" % "logback-classic" % "1.1.3",
   "commons-io" % "commons-io" % "2.4",
-  "ma.glasnost.orika" % "orika-core" % "1.4.6",
   "org.json4s" %% "json4s-core" % "3.2.11",
   "org.json4s" %% "json4s-jackson" % "3.2.11",
   "org.json4s" %% "json4s-ext" % "3.2.11",
