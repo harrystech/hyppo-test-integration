@@ -11,8 +11,6 @@ Here are the classes involved in retrieving, processing, persisting data.  This 
 4. DemoDataPersister -- should upload the data (but the demo integration just logs the values).
 
 Also needed:
-
-* JSON schema
 * Avro schema
 
 
@@ -33,7 +31,7 @@ sbt clean compile assembly
     "jdbcUrl" : "DSN"
 }
 ```
-3.2. For the integration, enter `com.harrys.demo.DemoIntegration` as the class name and add the S3 bucket and object key information based on the upload step.
-4 Now submit a job to test it.
+3.2. For the integration, enter `com.harrys.hyppo.demo.DemoIntegration` as the class name and add the S3 bucket and object key information based on the upload step.
+4. Now submit a job to test it.
 
 Hint: Killing the executor process will dump the logging to STDOUT.
