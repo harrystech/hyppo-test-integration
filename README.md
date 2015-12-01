@@ -16,7 +16,7 @@ Also needed:
 
 ## Test run
 
-1. Create the artefact (in `target/scala-2.<version>/<integration name>-<version>.jar`)
+1. Create the artifact (in `target/scala-2.<version>/<integration name>-<version>.jar`)
 ```shell
 sbt clean compile assembly
 ```
@@ -33,5 +33,9 @@ sbt clean compile assembly
 ```
 3.2. For the integration, enter `com.harrys.hyppo.demo.DemoIntegration` as the class name and add the S3 bucket and object key information based on the upload step.
 4. Now submit a job to test it.
+5. Test overriding the value sequence by specifying a single value as the job parameter
+```JSON
+{ "value": 1 }
+```
 
 Hint: Killing the executor process will dump the logging to STDOUT.

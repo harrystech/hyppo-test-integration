@@ -11,8 +11,6 @@ import org.slf4j.LoggerFactory
 
 final class DemoDataProcessor extends RawDataProcessor[DemoAvroRecord] {
 
-  private val log = Logger(LoggerFactory.getLogger(this.getClass))
-
   override def processRawData(process: ProcessRawData[DemoAvroRecord]): Unit = {
 
     implicit val formats = DefaultFormats
@@ -24,8 +22,6 @@ final class DemoDataProcessor extends RawDataProcessor[DemoAvroRecord] {
       val row = json.extract[DemoJson]
       val record = new DemoAvroRecord(row.jobUUID, row.taskNumber, row.firstValue, row.lastValue, row.chunkSize, row.jobValue, row.value)
       process.append(record)
-
-      // log.info(s"Processed record $row")
 
     } finally {
       IOUtils.closeQuietly(stream)

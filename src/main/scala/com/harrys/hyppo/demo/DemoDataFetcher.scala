@@ -13,8 +13,6 @@ final class DemoDataFetcher extends RawDataFetcher {
 
   val charset = Charsets.UTF_8
 
-  private val log = Logger(LoggerFactory.getLogger(this.getClass))
-
   override def fetchRawData(fetcher: FetchRawData): Unit = {
 
     val sourceConfiguration = new DemoSourceConfiguration(fetcher.getSource.getConfiguration)
@@ -38,8 +36,6 @@ final class DemoDataFetcher extends RawDataFetcher {
         val json = pretty(render(row))
         val stream = new ByteArrayInputStream(json.getBytes(charset))
         fetcher.addData(stream)
-
-      // log.info(s"Added value $singleValue to stream")
     }
   }
 
