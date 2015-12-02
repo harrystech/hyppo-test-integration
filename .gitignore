@@ -1,7 +1,9 @@
+# Compiled and output files
 *.class
 *.log
+src/main/java/com/harrys/hyppo/demo/avro/*
 
-# sbt specific
+# SBT specific
 .cache
 .history
 .lib/

@@ -8,7 +8,7 @@ import com.harrys.hyppo.source.api.{RawDataIntegration, ValidationResult}
 
 class DemoIntegration extends RawDataIntegration[DemoAvroRecord] {
 
-  // Implement DataIntegration interface
+  // Implement DataIntegration interface:
 
   override val avroType = AvroRecordType.forClass(classOf[DemoAvroRecord])
 
@@ -22,11 +22,14 @@ class DemoIntegration extends RawDataIntegration[DemoAvroRecord] {
 
   override def newProcessedDataPersister(): ProcessedDataPersister[DemoAvroRecord] = new DemoPersister()
 
-  // RawDataIntegration interface
+  // Implement RawDataIntegration interface:
 
   override def newRawDataFetcher(): RawDataFetcher = new DemoDataFetcher()
 
   override def newRawDataProcessor(): RawDataProcessor[DemoAvroRecord] = new DemoDataProcessor()
 
+  // Example final-wrapper-upper
+
+  override def onJobCompleted(details: HandleJobCompleted): Unit = DemoCompletion.onJobCompleted(details)
 
 }
