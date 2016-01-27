@@ -4,7 +4,7 @@ organization := "com.harrys"
 
 name := "hyppo-test-integration"
 
-version := "0.6.1"
+version := "0.6.4"
 
 scalaVersion := "2.11.7"
 
@@ -28,7 +28,7 @@ libraryDependencies ++= Seq(
   "org.json4s" %% "json4s-core" % "3.2.11",
   "org.json4s" %% "json4s-jackson" % "3.2.11",
   "org.json4s" %% "json4s-ext" % "3.2.11",
-  "com.harrys.hyppo" % "source-api" % "0.6.0"
+  "com.harrys.hyppo" % "source-api" % "0.6.4"
 )
 
 lazy val integrationUtils  = RootProject(uri("https://github.com/harrystech/ingestion-utils.git#v0.0.2"))
